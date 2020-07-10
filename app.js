@@ -10,13 +10,7 @@ const getOption = async () => {
 const select = document.querySelector('select')
 
 
-    dogList.forEach((dog) => {
-      const option = document.createElement('option')
-      option.value = `${dog}`
-      option.text = `${dog}`
-      select.append(option)
-
-})
+    optionValues(dogList, )
   
   } catch (error) {
     console.log(`Error: ${error}`)
@@ -26,3 +20,14 @@ const select = document.querySelector('select')
 }
 
 getOption()
+
+function optionValues(lis, element) {
+  dogList.forEach((dog) => {
+    const option = document.createElement('option')
+    option.value = `${dog}`
+    option.text = `${dog}`
+    select.append(option)
+
+  })
+
+}
