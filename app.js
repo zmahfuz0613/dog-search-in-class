@@ -50,7 +50,10 @@ async function getBreed(breed) {
   
   try {
     const response = await axios.get(url)
-    
+    console.log(response.data)
+    const breedSelected = response.data.message
+    dogPic(breedSelected)
+
   } catch (error) {
     
     console.log(`Error: ${error}`)
@@ -59,6 +62,14 @@ async function getBreed(breed) {
 
 }
 
+function dogPic(breed) {
+  const img = document.createElement('img')
+  img.src = breed
+  img.style.width = '400px'
+  img.style.height = 'auto'
+  document.querySelector('#append-dog').append(img)
+  
+}
 
 
 const form = document.querySelector('form')
