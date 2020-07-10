@@ -4,9 +4,19 @@ const getOption = async () => {
 
   try {
     const response = await axios(url)
-    console.log(response.data.message)
     const dogList = Object.keys(response.data.message)
     console.log(dogList)
+
+const select = document.querySelector('select')
+
+
+    dogList.forEach((dog) => {
+      const option = document.createElement('option')
+      option.value = `${dog}`
+      option.text = `${dog}`
+      select.append(option)
+
+})
   
   } catch (error) {
     console.log(`Error: ${error}`)
