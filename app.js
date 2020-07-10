@@ -52,6 +52,9 @@ async function getBreed(breed) {
     const response = await axios.get(url)
     console.log(response.data)
     const breedSelected = response.data.message
+
+
+    removePic()
     dogPic(breedSelected)
 
   } catch (error) {
@@ -69,6 +72,15 @@ function dogPic(breed) {
   img.style.height = 'auto'
   document.querySelector('#append-dog').append(img)
   
+}
+
+function removePic() {
+
+  const oldPic = document.querySelector('#append-dog')
+  while (oldPic.lastChild) {
+    oldPic.removeChild(oldPic.lastChild)
+  }
+
 }
 
 
