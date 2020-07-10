@@ -5,7 +5,7 @@ const getOption = async () => {
   try {
     const response = await axios(url)
     const dogList = Object.keys(response.data.message)
-    console.log(dogList)
+    // console.log(dogList)
 
 const select = document.querySelector('select')
 
@@ -41,9 +41,25 @@ function value(e) {
   const optionValue = document.querySelector('#select-dog').value
 
   console.log(optionValue)
-
+getBreed(optionValue)
 
 }
+
+async function getBreed(breed) {
+  const url = `https://dog.ceo/api/breed/${breed}/images/random`
+  
+  try {
+    const response = await axios.get(url)
+    
+  } catch (error) {
+    
+    console.log(`Error: ${error}`)
+    
+  }
+
+}
+
+
 
 const form = document.querySelector('form')
 form.addEventListener('submit', value)
