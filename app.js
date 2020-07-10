@@ -10,7 +10,7 @@ const getOption = async () => {
 const select = document.querySelector('select')
 
 
-    optionValues(dogList, )
+    optionValues(dogList, select)
   
   } catch (error) {
     console.log(`Error: ${error}`)
