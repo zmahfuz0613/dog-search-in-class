@@ -21,12 +21,12 @@ const select = document.querySelector('select')
 
 getOption()
 
-function optionValues(lis, element) {
-  dogList.forEach((dog) => {
+function optionValues(list, element) {
+  list.forEach((dog) => {
     const option = document.createElement('option')
     option.value = `${dog}`
     option.text = `${dog}`
-    select.append(option)
+    element.append(option)
 
   })
 
