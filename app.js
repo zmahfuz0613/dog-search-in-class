@@ -31,3 +31,21 @@ function optionValues(list, element) {
   })
 
 }
+
+
+// Option values 
+
+function value(e) {
+
+  e.preventDefault()
+  const optionValue = document.querySelector('#select-dog').value
+
+  console.log(optionValue)
+
+
+}
+
+const form = document.querySelector('form')
+form.addEventListener('submit', value)
+
+
