@@ -1,1 +1,1 @@
-# dog-search-in-clas
+# dog-search-in-class
